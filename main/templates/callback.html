@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block header %} {% include 'header.html' %} {% endblock header %}
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12 col-md-3 pavat">
+            <img src="{{userprof.pix.url}}" alt="" style="width: 80%; height: 250px;">
+            {% comment %} <img src="{% if user.profile.avatar %}{{ user.profile.avatar.url }}{% else %}/path/to/default/avatar.png{% endif %}" alt="Avatar" style="width: 100px; height: 100px;"> {% endcomment %}
+
+            <h5>{{userprof.user}}</h5>
+        </div>
+        <div class="col-12 col-md-6 pform">
+            <p style="font-size:16px; font-weight:bold;">dear <span>{{userprof.user}}</span>your order has been received and payment has been confirmed. <br> one of our representatives will contact you shortly. <br> thanks for your patronage!</p>
+        </div>
+        <div class="col-12 col-md-3 plink">
+            <h2 class="text-center">Quick links</h2>
+            <ul class="list-unstyled pt-3">
+                <li><a href="{% url 'profile' %}"><i class="bi bi-caret-right-fill"></i> profile <i class="bi bi-caret-right-fill"></i></a></li>
+                <li><a href="{% url 'profile_update' %}"><i class="bi bi-caret-right-fill"></i> profile update <i class="bi bi-caret-right-fill"></i></a></li>
+                <li><a href="{% url 'password_update' %}"><i class="bi bi-caret-right-fill"></i> password update <i class="bi bi-caret-right-fill"></i></a></li>
+                <li><a href="{% url 'home' %}"><i class="bi bi-caret-right-fill"></i> home <i class="bi bi-caret-right-fill"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

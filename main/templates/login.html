@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block header %} {% include 'header.html' %} {% endblock header %}
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+
+<div class="container mt-5 mb-5 ">
+    <div class="row pt-3">
+        <h1 class="text-center title">Log in</h1>
+        <div class="col-12 register">
+            <form action="{% url 'signin' %}" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="font-size: 15px; font-weight: bold;">Log in</button>
+                <div class="text-center pt-5">
+                    <p style=" font-size: 14px; font-weight:bold; ">Not a member? <a href="{% url 'register' %}" class=""
+                            style="color: #712cf9; font-weight:bold; font-size:14px; text-decoration: none; ">Register
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

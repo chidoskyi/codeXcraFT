@@ -1,0 +1,104 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg  " style="background-color: #712cf9;  ">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}" style=""><img src="{{info.logo.url}}" style="height: 50px; "></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-5" style="margin-left: 320px;">
+                
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Category
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for item in categ %}
+                        <li><a class="dropdown-item" href="{% url  'category' item.id item.slug %}">{{item.brand|title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'contact' %}">Contact</a>
+                </li>  
+                {% comment %} <li><a class="nav-link" href="{% url 'signin' %}">Log in</a></li>
+                <li><a class="nav-link" href="{% url 'register' %}">Register</a></li> {% endcomment %}
+                <li><a class="nav-link" href="{% url 'cart' %}"><i class="bi bi-cart4"></i></a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        
+                        {% if user.customer %}
+                        <img src="{{user.customer.pix.url}}" alt="" width="30px" height="30px" >   
+                        {% endif %}
+                            
+                         
+                         {% if request.user %}
+                            <span>Hi {{user.username}}!</span> 
+                         {% endif %}
+                            
+
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'signout' %}">Logout</a></li>
+
+                    </ul>
+                </li>
+                
+                {% else %}
+                <li class="nav-item" style="margin-left: 100px;">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Category
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for item in categ %}
+                        <li><a class="dropdown-item" href="{% url  'category' item.id item.slug %}">{{item.brand|title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li><a class="nav-link" href="{% url 'signin' %}">Log in</a></li>
+                <li><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+            <form class="d-flex" role="search" action="{% url 'search' %}" method="POST">
+                {% csrf_token %}
+                <input class="form-control me-2" type="search" name="search" value="" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success"  type="submit">Search</button>
+            </form>
+            
+    </div>
+    
+</nav>
+<!-- pop up -->
+
+{% for item in messages %}
+    <div class="alert alert-success alert-dismissible text-center fade show mb-0"   role="alert">
+    <strong style="font-size: 16px; ">{{item|title}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endfor %}
+
+    
+
+<!-- pop up done -->

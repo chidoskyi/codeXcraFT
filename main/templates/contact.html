@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block header %} {% include 'header.html' %} {% endblock header %}
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+<div class="container mt-5 mb-5 ">
+    <div class="row pt-3">
+        <h1 class="text-center title">contact us</h1>
+        <div class="col-12 col-md-6 contact">
+            <form action="{% url 'contact' %}" method="POST"> 
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Message</label>
+                    <textarea name="message" id="text-area" cols="30" rows="10" style="height: 130px; " class="form-control" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-12 col-md-6">
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d672.4998595533131!2d-122.33250089999999!3d47.6067006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490415b59cb97e7%3A0xb3a044a779f5fdd2!2sSeattle%20Public%20Library%20-%20Central%20Library!5e0!3m2!1sen!2sus!4v1698673748883!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+      
+{% endblock content %}
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block header %} {% include 'header.html' %} {% endblock header %}
+{% block banner %} {% include 'banner.html' %} {% endblock banner %}
+{% block content %}
+<div class="card container mb-3 mt-5 detail">
+  <div class="row g-0 detrow">
+      <div class="col-12 col-md-7 det">
+          <img src="{{cardet.carimg.url}}" class="img-fluid rounded-start" alt="...">
+          <ul class="list-unstyled">
+              <li><i class="bi bi-fuel-pump-diesel"></i></li>
+              <li><i class="bi bi-car-front-fill"></i></li>
+              <li><i class="bi bi-speedometer"></i></li>
+          </ul>
+      </div>
+      <div class="col-12 col-md-5 detinfo">
+          <div class="card-body">
+              <h5 class="card-title text-center pb-2 pt-1 bg-dark">Mercedes AMG</h5>
+              <p class="card-text"><span>model:</span> {{cardet.model}}</p>
+              <p class="card-text"><span>year:</span> {{cardet.year}}</p>
+              <p class="card-text"><span>color:</span> {{cardet.color}}</p>
+              <p class="card-text"><span>seats:</span>{{cardet.seats}}</p>
+              <p class="card-text"><span>registered:</span>{{cardet.registered}}</p>
+              <div class="text-center but"> 
+                  <p>${{cardet.price}}</p>
+                  <button class="btn btn-warning">Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+      
+{% endblock content %}
+{% block footer %} {% include 'footer.html' %} {% endblock footer %}

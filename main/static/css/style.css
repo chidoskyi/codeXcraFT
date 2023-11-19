@@ -1,0 +1,471 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styling navbar */
+.navbar-nav .nav-link{
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-link img{
+    border-radius: 100%;
+}
+
+.dropdown .dropdown-menu {
+    background-color: #712cf9;
+}
+.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color:black;
+    color: white;
+}
+
+.collapse form button{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.collapse form button:hover{
+    background-color: #ea7b23;
+}
+/* styling navbar done */
+
+/* styling carosel */
+.caroimg{
+    height: 80vh;
+
+}
+
+.carousel-control-prev span i{
+    font-size: 40px;
+    color: #712cf9;
+}
+
+.carousel-control-next span i{
+    font-size: 40px;
+    color: #712cf9;
+}
+
+.carousel-indicators .active{
+    background-color: #712cf9 !important ;
+}
+/* styling carosel done */
+
+/* styling content  */
+.title{
+    text-transform: capitalize;
+    color: #712cf9;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.title::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.motor img{
+    width: 100%;
+    height: 60vh;
+}
+
+.home .card-body{
+    text-align: center;
+    margin-top: 15%;
+    text-transform: capitalize;
+}
+
+.home .card{
+    border: none;
+}
+
+.home .card .card-body{
+    box-shadow: 5px 10px #f0f0f0;
+    height: 42vh;
+}
+
+.card-body .btn{
+    padding: 10px 20px;
+    background-color: #712cf9;
+}
+
+.card-body .card-text{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card-body .btn:hover{
+    background-color: #712cf9;
+    opacity: 0.9;
+}
+/* styling content done */
+
+/* stying footer */
+.footer{
+    background-color: #555;
+    padding-top: 3%;
+}
+
+.footer h1{
+    text-transform: capitalize;
+    color: white;
+    font-size: 20px;
+}
+
+.footer ul a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer ul a:hover{
+    color: #712cf9;
+}
+
+.footer ul i{
+    color: #712cf9  ;
+}
+
+.footer2{
+    background-color: #712cf9;
+}
+
+.footer2 p{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+/* stying footer done */
+
+/* styling product page */
+.banner{
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(/media/banner/toyata-banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+.product{
+    padding-bottom: 5%;
+
+}
+
+.product h1{
+    color: #712cf9;
+    text-transform: capitalize;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.product .card{
+    border: 2px solid #712cf9;
+    border-radius: 10%;
+    box-shadow: 5px 5px 15px 5px;
+    transition: 1s;
+    padding-bottom: 2%;
+}
+
+.pagination a{
+    font-weight: 500;
+}
+
+.pagination{
+    padding-top: 50px;
+}
+
+.pagination a:hover{
+    color: black;
+    background-color: #712cf9;
+}
+
+.list-unstyled i{
+    color: #712cf9;
+    font-size: 15px;
+}
+
+
+.product .card img{
+    /* height: 260px; */
+    padding: 4%;
+    border-bottom: 4px solid #712cf9;
+
+}
+
+.product .card:hover{
+    transform: translateY(-30px);
+}
+/* styling product page done */
+
+/* styling detail page */
+.detinfo h5{
+    color: #712cf9;
+    font-weight: bold;
+}
+
+.det{
+    border-right: 2px solid #712cf9;
+}
+
+.detail{
+    border: 2px solid #712cf9 !important;
+    box-shadow: 0 0 50px 0 #712cf9 !important;
+}
+
+ .card-body p{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-family: fantasy;
+    word-spacing: 10px;
+ }
+
+ .but p{
+    font-size: 25px;
+    color: #712cf9;
+ }
+
+ .but .btn{
+    border: none;
+ }
+/* styling detail page done */
+
+/* styling contact */
+
+.mb-3 .form-control{
+    height: 40px;
+}
+
+.contact{
+    padding-top: 3%;
+}
+
+.contact form{
+    outline: 2px solid #712cf9;
+    padding: 4%;
+}
+
+form .btn{
+    background-color: #712cf9;
+    color: white;
+}
+
+form .btn:hover{
+    background-color: #743ce2;
+    color: white;
+}
+
+.map{
+    padding-top: 6%;
+}
+/* styling contact done */
+
+/* styling register page */
+.register form{
+    width: 50%;
+    margin: auto;
+    outline: 2px solid #712cf9;
+    padding: 3%;
+    margin-top: 3%;
+}
+
+.register .btn{
+    width: 100%;
+    padding: 10px 0px;
+}
+/* styling register page done */
+
+/* styling cart page */
+.cart    table{
+    width: 100%;
+}
+
+.cart thead{
+    background-color: #712cf9;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px;
+}
+
+.cart th{
+    text-transform: capitalize;
+}
+
+.cart tbody{
+    text-align: center;
+}
+
+.cart tbody i{
+    color: red;
+}
+
+.cart td{
+    text-transform: capitalize;
+}
+
+.item td{
+    border: 2px solid #712cf9 ;
+}
+
+.subtot td{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.cartbut button{
+    text-transform: capitalize;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    background-color: #712cf9;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+}
+
+.cartbut button:hover{
+    background-color: #743ce2;
+    color: white;
+}
+
+.cartbut button:focus{
+    background-color: #743ce2;
+    color: white;
+}
+/* styling cart page done */
+
+/* styling checkout page */
+.cart h1{
+    text-transform: capitalize;
+    color: #712cf9;
+}
+
+.total td{
+    font-weight: 700;
+   font-size: 30px; 
+}
+
+.checkout{
+    padding-top: 7.5%;
+}
+
+.form-label{
+    font-size: 15px;
+    font-weight: 500;
+}
+/* styling checkout page done */
+
+/* styling profile */
+.pavat{
+    text-align: center;
+}
+
+.pavat img{
+    border-radius: 100%;
+}
+
+.pavat h5{
+    font-style: italic;
+    text-transform: capitalize;
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.plink h2{
+    text-transform: capitalize;
+    border-bottom: 2px solid black;
+    margin-top: 4%;
+}
+
+.plink{
+    background-color: #712cf9;
+    border-radius: 1rem;
+}
+
+.plink a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 20px;
+}
+
+.pform form{
+    outline: 2px solid #712cf9;
+    padding: 3%;
+    width: 50%;
+}
+
+.pform input{
+    background-color: #712cf9;
+}
+
+.alert strong{
+    font-size: 16px;
+}
+
+form #text-area{
+    height: 130px;
+}
+
+/* styling profile done */
+
+@media (min-width: 320px ) and (max-width: 768px) {
+    .caroimg{
+        height: 40vh;
+    
+    }
+    .carousel-control-prev span i{
+        font-size: 20px;
+        color: #712cf9;
+    }
+    .carousel-control-next span i{
+        font-size: 20px;
+        color: #712cf9;
+    }
+    .title{
+        text-transform: capitalize;
+        color: #712cf9;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .title::after{
+        content: '';
+        display: block;
+        width: 150px;
+        height: 2px;
+        background-color: black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .motor img{
+        width: 100%;
+        height: 40vh;
+    }
+
+    .map{
+        padding-top: 6%;
+        width: 100%;
+    }
+
+    .register form{
+        width: 100%;
+        margin: auto;
+        outline: 2px solid #712cf9;
+        padding: 3%;
+        margin-top: 3%;
+    }
+
+    .pform form{
+        outline: 2px solid #712cf9;
+        padding: 3%;
+        margin-bottom: 8%;
+    }
+    
+}
